@@ -1,0 +1,31 @@
+### Root health
+GET http://localhost:3001/
+
+### API health
+GET http://localhost:3001/api/health
+
+### List notes
+GET http://localhost:3001/api/notes
+
+### Create note
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "title": "First note",
+  "content": "Ocean Professional - clean and modern.",
+  "accent": "#2563EB"
+}
+
+### Update note (replace {id})
+PUT http://localhost:3001/api/notes/{{id}}
+Content-Type: application/json
+
+{
+  "title": "Updated",
+  "content": "Updated content",
+  "accent": "#F59E0B"
+}
+
+### Delete note (replace {id})
+DELETE http://localhost:3001/api/notes/{{id}}
